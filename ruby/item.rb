@@ -1,9 +1,12 @@
-class Item
-    def initialize(name)
-        @name = name
-    end
+# frozen_string_literal: true
 
-    def to_s()
-        @name
-    end
+#:nodoc:
+class Item
+  def initialize(name)
+    @name = name
+  end
+
+  def to_s
+    @name
+  end
 end

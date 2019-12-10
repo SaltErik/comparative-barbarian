@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require './item.rb'
 require './hero.rb'
 
-longsword = Item.new("Longsword")
+longsword = Item.new('Longsword')
 
-shield = Item.new("Shield")
+shield = Item.new('Shield')
 
-conan = Hero.new("Conan", longsword, shield)
+conan = Hero.new('Conan', longsword, shield)
 
 puts conan
 puts conan.lmb

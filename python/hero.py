@@ -1,5 +1,4 @@
 class Hero():
-
     def __init__(self, name, mainhand, offhand):
         self.name = name
         self.mainhand = mainhand
