@@ -4,7 +4,7 @@ export class Item {
     this.name = name;
   }
 
-  [Symbol.toPrimitive](hint) {
-    if (hint === 'string') return this.name;
+  toString() {
+    return `${this.name}`;
   }
 }

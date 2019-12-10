@@ -9,7 +9,7 @@ class Hero():
         return f"{self.name} ({self.mainhand}, {self.offhand})"
 
     def lmb(self):
-        return f"{self.name} uses {self.mainhand}"
+        return f"{self.name} uses {self.mainhand}!"
 
     def rmb(self):
-        return f"{self.name} uses {self.offhand}"
+        return f"{self.name} uses {self.offhand}!"

@@ -14,6 +14,6 @@ class Hero
     end
 
     def rmb()
-        return "#{@name} uses #{@offhand}"
+        return "#{@name} uses #{@offhand}!"
     end
 end
