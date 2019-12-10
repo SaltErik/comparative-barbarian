@@ -21,7 +21,7 @@ pub fn main() {
         offhand: shield,
     };
 
-    println!("{:?}", conan);
-    println!("{:?}", conan.lmb());
-    println!("{:?}", conan.rmb());
+    println!("{:#?}", conan);
+    println!("{}", conan.lmb());
+    println!("{}", conan.rmb());
 }

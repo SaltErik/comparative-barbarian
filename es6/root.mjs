@@ -7,6 +7,6 @@ const shield = new Item("Shield");
 
 const conan = new Hero("Conan", longsword, shield);
 
-console.log(`${conan}`);
+console.dir(conan, { color: true, depth: null });
 console.log(conan.lmb());
 console.log(conan.rmb());
