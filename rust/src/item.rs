@@ -1,4 +1,4 @@
 #[derive(Debug)]
 pub struct Item {
-    pub name: String,
+    pub name: &'static str,
 }

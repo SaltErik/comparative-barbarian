@@ -1,20 +1,20 @@
 mod hero;
 mod item;
 
-use hero::Hero;
-use item::Item;
+use crate::hero::Hero;
+use crate::item::Item;
 
 fn main() {
     let longsword = Item {
-        name: "Longsword".to_string(),
+        name: "Longsword",
     };
 
     let shield = Item {
-        name: "Shield".to_string(),
+        name: "Shield",
     };
 
     let conan = Hero {
-        name: "Conan".to_string(),
+        name: "Conan",
         mainhand: longsword,
         offhand: shield,
     };
