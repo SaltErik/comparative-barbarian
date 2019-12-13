@@ -6,7 +6,7 @@ use hero::Hero;
 use interactable::Interactable;
 use item::Item;
 
-pub fn main() {
+fn main() {
     let longsword = Item {
         name: String::from("Longsword"),
     };
