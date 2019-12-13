@@ -1,22 +1,20 @@
 mod hero;
-mod interactable;
 mod item;
 
 use hero::Hero;
-use interactable::Interactable;
 use item::Item;
 
 fn main() {
     let longsword = Item {
-        name: String::from("Longsword"),
+        name: "Longsword".to_string(),
     };
 
     let shield = Item {
-        name: String::from("Shield"),
+        name: "Shield".to_string(),
     };
 
     let conan = Hero {
-        name: String::from("Conan"),
+        name: "Conan".to_string(),
         mainhand: longsword,
         offhand: shield,
     };
