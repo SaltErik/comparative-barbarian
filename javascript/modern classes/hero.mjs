@@ -11,10 +11,10 @@ export class Hero {
   }
 
   lmb() {
-    return (`${this.name} uses ${this.mainhand}!`);
+    return `${this.name} uses ${this.mainhand}!`;
   }
 
   rmb() {
-    return (`${this.name} uses ${this.offhand}!`);
+    return `${this.name} uses ${this.offhand}!`;
   }
 }
