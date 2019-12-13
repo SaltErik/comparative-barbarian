@@ -9,9 +9,9 @@ pub struct Hero {
 
 impl Hero {
     pub fn lmb(&self) -> String {
-        format!("{} uses {}!", &self.name, &self.mainhand.name)
+        format!("{} uses {}!", self.name, self.mainhand.name)
     }
     pub fn rmb(&self) -> String {
-        format!("{} uses {}!", &self.name, &self.offhand.name)
+        format!("{} uses {}!", self.name, self.offhand.name)
     }
 }
