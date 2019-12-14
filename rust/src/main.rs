@@ -1,8 +1,8 @@
 mod hero;
 mod item;
 
-use crate::hero::Hero;
-use crate::item::Item;
+use hero::Hero;
+use item::Item;
 
 fn main() {
     let longsword = Item {
