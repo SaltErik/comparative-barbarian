@@ -1,39 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Item {
+typedef struct {
   char *name;
-};
+} Item;
 
-struct Hero {
+typedef struct {
   char *name;
-  struct Item mainhand;
-  struct Item offhand;
+  Item mainhand;
+  Item offhand;
   void (*lmb)(struct Hero *);
   void (*rmb)(struct Hero *);
   void (*to_string)(struct Hero *);
-};
+} Hero;
 
-void lmb(struct Hero *self) {
+void lmb(Hero *self) {
   printf("\n%s uses %s!\n", self->name, self->mainhand);
 }
 
-void rmb(struct Hero *self) {
+void rmb(Hero *self) {
   printf("\n%s uses %s!\n", self->name, self->offhand);
 }
 
-void to_string(struct Hero *self) {
+void to_string(Hero *self) {
   printf("\n%s: {\n  mainhand: %s,\n  offhand: %s,\n}\n", self->name, self->mainhand, self->offhand);
 }
 
 int main() {
-  struct Item *longsword = malloc(sizeof(struct Item));
+  Item *longsword = malloc(sizeof(Item));
   longsword->name = "Longsword";
 
-  struct Item *shield = malloc(sizeof(struct Item));
+  Item *shield = malloc(sizeof(Item));
   shield->name = "Shield";
 
-  struct Hero *conan = malloc(sizeof(struct Hero));
+  Hero *conan = malloc(sizeof(Hero));
   conan->name = "Conan";
   conan->mainhand = *longsword;
   conan->offhand = *shield;
