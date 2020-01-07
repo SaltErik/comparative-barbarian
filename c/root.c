@@ -1,51 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct {
+struct Item {
   char *name;
-} Item;
+};
 
-typedef struct {
+struct Hero {
   char *name;
-  Item mainhand;
-  Item offhand;
-  void (*lmb)(struct Hero *);
-  void (*rmb)(struct Hero *);
-  void (*to_string)(struct Hero *);
-} Hero;
+  struct Item mainhand;
+  struct Item offhand;
+  void (*lmb)(struct Hero);
+  void (*rmb)(struct Hero);
+  void (*to_string)(struct Hero);
+};
 
-void lmb(Hero *self) {
-  printf("\n%s uses %s!\n", self->name, self->mainhand);
+void lmb(struct Hero self) {
+  printf("\n%s uses %s!\n", self.name, self.mainhand);
 }
 
-void rmb(Hero *self) {
-  printf("\n%s uses %s!\n", self->name, self->offhand);
+void rmb(struct Hero self) {
+  printf("\n%s uses %s!\n", self.name, self.offhand);
 }
 
-void to_string(Hero *self) {
-  printf("\n%s: {\n  mainhand: %s,\n  offhand: %s,\n}\n", self->name, self->mainhand, self->offhand);
+void to_string(struct Hero self) {
+  printf("\n%s: {\n  mainhand: %s,\n  offhand: %s,\n}\n", self.name, self.mainhand, self.offhand);
 }
 
 int main() {
-  Item *longsword = malloc(sizeof(Item));
-  longsword->name = "Longsword";
+  struct Item longsword;
+  longsword.name = "Longsword";
 
-  Item *shield = malloc(sizeof(Item));
-  shield->name = "Shield";
+  struct Item shield;
+  shield.name = "Shield";
 
-  Hero *conan = malloc(sizeof(Hero));
-  conan->name = "Conan";
-  conan->mainhand = *longsword;
-  conan->offhand = *shield;
-  conan->lmb = lmb;
-  conan->rmb = rmb;
-  conan->to_string = to_string;
+  struct Hero conan;
+  conan.name = "Conan";
+  conan.mainhand = longsword;
+  conan.offhand = shield;
+  conan.lmb = lmb;
+  conan.rmb = rmb;
+  conan.to_string = to_string;
 
-  printf("\n%s\n", conan->name);
-  printf("\n%s\n", conan->mainhand);
-  printf("\n%s\n", conan->offhand);
-  conan->lmb(conan);
-  conan->rmb(conan);
-  conan->to_string(conan);
+  printf("\n%s\n", conan.name);
+  printf("\n%s\n", conan.mainhand);
+  printf("\n%s\n", conan.offhand);
+  conan.lmb(conan);
+  conan.rmb(conan);
+  conan.to_string(conan);
   return 0;
 }
